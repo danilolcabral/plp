@@ -1,0 +1,52 @@
+{
+    classe contrato Banco {
+
+    	int sintaxe = 0;
+        
+    	Banco(int endereco){
+    		this.endereco := endereco
+    	},
+    	proc pagavel receber(int origem, int valor) {
+    		transferir(origem, this.endereco, valor)
+     	},
+		proc getSaldo(){
+			lerDaBlockchain(this.endereco)
+     	},
+     	proc getEndereco() {
+     		write("Endereço: " ++ this.endereco)
+     	}
+     }
+     ;    
+     {
+    	(Banco b1 := new Banco(9999), Banco b2 := new Banco(9998));
+
+		write("======================= Antes da Transferência ==========================");		
+	   	write("Endereço e Saldo de B1: ");
+   		b1.getEndereco();
+   		b1.getSaldo();
+		write("");
+
+	   	write("Endereço e Saldo de B2: ");
+   		b2.getEndereco();
+   		b2.getSaldo();
+		write("");
+		write("=========================================================================");
+		write("");
+
+    	b1.receber(9998,25);
+
+		write("======================== Após a Transferência ===========================");		
+	   	write("Endereço e Saldo de B1: ");
+   		b1.getEndereco();
+   		b1.getSaldo();
+		write("");
+
+	   	write("Endereço e Saldo de B2: ");
+   		b2.getEndereco();
+   		b2.getSaldo();
+		write("");
+		write("=========================================================================");
+
+    	write("")
+     }
+}
