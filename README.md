@@ -8,7 +8,7 @@ Declaracao ::= DecClasse
 &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;| DecClasse "," Declaracao
 
 DecClasse ::= DecClasseTradicional  
-&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;| DecClasseContrato
+&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;| [DecClasseContrato](https://github.com/danilolcabral/plp/blob/main/orientadaObjetos2/declaracao/classe/DecClasseContratoSimplesOO2.java)
 
 Comando ::= Atribuicao  
 &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;| ComDeclaracao  
