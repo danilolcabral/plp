@@ -22,21 +22,21 @@ Comando ::= Atribuicao
            
 IO ::= "write" "(" Expressao ")"  
 &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;| "read" "(" Id ")"  
-&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;| “escreverNaBlockchain" "(" Expressao ")"  
-&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;| "lerDaBlockchain" "(" Expressao ")"  
-&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;| "transferir" "(" Expressao ")"  
+&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;| "[escreverNaBlockchain](https://github.com/danilolcabral/plp/blob/main/orientadaObjetos1/comando/WriteToBlockchain.java)" "(" Expressao ")"  
+&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;| "[lerDaBlockchain](https://github.com/danilolcabral/plp/blob/main/orientadaObjetos1/comando/ReadFromBlockchain.java)" "(" Expressao ")"  
+&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;| "[transferir](https://github.com/danilolcabral/plp/blob/main/orientadaObjetos1/comando/TransferAtBlockchain.java)" "(" Expressao ")"  
      
 DecClasseTradicional ::= "classe" Id ["extends"  Id] {" DecVariavel ";" DecConstrutor "," DecProcedimentoTradicional "}"
 
-DecClasseContrato ::= "classe" "contrato" Id {" DecVariavel ";" DecConstrutor "," DecProcedimento "}"
+[DecClasseContrato](https://github.com/danilolcabral/plp/blob/main/orientadaObjetos2/declaracao/classe/DecClasseContratoSimplesOO2.java) ::= "classe" "contrato" Id {" DecVariavel ";" DecConstrutor "," DecProcedimento "}"
 
 DecProcedimento ::= DecProcedimentoTradicional  
-&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;| DecProcedimentoPagavel  
+&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;| [DecProcedimentoPagavel](https://github.com/danilolcabral/plp/blob/main/orientadaObjetos1/declaracao/procedimento/DecProcedimentoPagavelSimples.java)  
 &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;| DecProcedimento "," DecProcedimento
 
 DecProcedimentoTradicional ::= "proc" Id "(" [ListaDeclaracaoParametro] ")" "{" Comando "}"
 
-DecProcedimentoPagavel ::= "proc" "pagavel" Id "(" ParametrosPagaveis [ListaDeclaracaoParametro] ")" "{" Comando "}"
+[DecProcedimentoPagavel](https://github.com/danilolcabral/plp/blob/main/orientadaObjetos1/declaracao/procedimento/DecProcedimentoPagavelSimples.java) ::= "proc" "pagavel" Id "(" ParametrosPagaveis [ListaDeclaracaoParametro] ")" "{" Comando "}"
 
 # Equipe
 - Danilo Rafael de Lima Cabral - drlc@cin.ufpe.br
